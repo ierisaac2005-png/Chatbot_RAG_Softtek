@@ -13,33 +13,6 @@ El corpus se conserva íntegro. Cada documento es corto y actúa como una unidad
 
 El LLM recibe la consulta y las fuentes seleccionadas y redacta la respuesta. **RAG no garantiza exactitud.** Las fuentes se muestran completas para revisarlas. El control de IDs rechaza referencias inexistentes, pero no verifica si cada afirmación está sustentada.
 
-## Estructura
-```text
-Actividad_5_Softtek/
-├── app.py
-├── pruebas.py
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── src/
-│   ├── chatbot.py
-│   └── recomendador.py
-├── data/
-│   └── corpus.csv
-├── notebooks/
-│   └── Actividad_5_Chatbot_Softtek.ipynb
-├── documentos/
-│   ├── Reporte_Actividad_5_Softtek.pdf
-│   └── flujo_chatbot.png
-└── evidencias/
-    ├── captura_P1.png
-    ├── captura_P2.png
-    ├── captura_P3.png
-    ├── tabla_pruebas.csv
-    ├── resultados_pruebas.json
-    ├── ejecucion.txt
-    └── interfaz_verificada.txt
-```
 
 ## Ejecutar la interfaz local
 Python 3.10 o posterior. Desde la raíz de la carpeta:
