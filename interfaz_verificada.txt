@@ -1,0 +1,1 @@
+Streamlit iniciado localmente. Tres consultas enviadas por la interfaz con Playwright. Respuestas y fuentes mostradas. Capturas PNG del navegador real.

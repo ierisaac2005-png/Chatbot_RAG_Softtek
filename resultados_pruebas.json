@@ -1,0 +1,115 @@
+{
+  "modelo": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "segundos_carga": 8.321,
+  "corpus_sha256": "7160f0ab2a3b8e32cc50a387f8df81c66aefcf9198449c2a4d0cb8acfc982e62",
+  "versiones": {
+    "python": "3.12.14",
+    "transformers": "4.57.1",
+    "torch": "2.15.0+cpu",
+    "sklearn": "1.8.0"
+  },
+  "pruebas": [
+    {
+      "prueba": "P1",
+      "tipo": "Información general",
+      "pregunta": "¿De qué trata DOC008?",
+      "consulta_resuelta": "¿De qué trata DOC008? (Documento de referencia: DOC008)",
+      "respuesta": "Trata de informar sobre un incidente fallido en el respaldo nocturno de la base de datos debido a la falta de espacio en el repositorio de copias. [DOC008]",
+      "modo": "rag",
+      "fuentes": [
+        {
+          "id": "DOC008",
+          "title": "Ticket: respaldo nocturno fallido por falta de espacio",
+          "text": "El respaldo nocturno de la base de datos falló porque el repositorio de copias no tenía espacio disponible. Soporte revisó la retención, liberó copias vencidas autorizadas y repitió el respaldo. Después ejecutó una restauración de prueba y verificó la integridad de los datos. Se configuró una alerta de capacidad para evitar que el incidente se repita.",
+          "score": null
+        }
+      ],
+      "documento_activo": "DOC008",
+      "segundos": 9.493
+    },
+    {
+      "prueba": "P2",
+      "tipo": "Recomendación y seguimiento",
+      "pregunta": "¿Qué documentos relacionados existen?",
+      "consulta_resuelta": "¿Qué documentos relacionados existen? (Documento de referencia: DOC008)",
+      "respuesta": "[DOC012] Bitácora de pruebas de recuperación  \n[DOC011] Ticket: restauración incompleta por copia dañada  \n[DOC010] FAQ: diferencia entre respaldo completo e incremental",
+      "modo": "rag",
+      "fuentes": [
+        {
+          "id": "DOC012",
+          "title": "Bitácora de pruebas de recuperación",
+          "text": "La bitácora registra las pruebas de restauración de respaldos, la fecha de cada copia y el responsable de la recuperación. Incluye la integridad de los datos recuperados y el tiempo empleado. Cuando una prueba supera el objetivo de recuperación, se revisan el tamaño del respaldo, la capacidad del repositorio y las instrucciones de restauración.",
+          "score": 0.09086712128496693
+        },
+        {
+          "id": "DOC011",
+          "title": "Ticket: restauración incompleta por copia dañada",
+          "text": "Durante una restauración de prueba se detectaron archivos dañados en una copia de respaldo. El equipo revisó la integridad, seleccionó una copia anterior y repitió la recuperación. Los datos recuperados se compararon con el inventario esperado. Se abrió una revisión del almacenamiento y se suspendió la eliminación de respaldos hasta asegurar una cadena de recuperación válida.",
+          "score": 0.08755159115102172
+        },
+        {
+          "id": "DOC010",
+          "title": "FAQ: diferencia entre respaldo completo e incremental",
+          "text": "El respaldo completo copia todos los datos seleccionados. El respaldo incremental guarda los cambios desde la copia anterior y requiere la cadena correspondiente para restaurar. Si falta una copia, la recuperación puede quedar incompleta. Antes de modificar la retención, el equipo debe comprobar que conserva los respaldos necesarios para reconstruir los datos.",
+          "score": 0.06221025647215894
+        }
+      ],
+      "documento_activo": "DOC008",
+      "segundos": 12.599
+    },
+    {
+      "prueba": "P3",
+      "tipo": "Consulta libre",
+      "pregunta": "¿Cómo se realiza la restauración de un respaldo y cómo se verifica la integridad de los datos?",
+      "consulta_resuelta": "¿Cómo se realiza la restauración de un respaldo y cómo se verifica la integridad de los datos?",
+      "respuesta": "La restauración de un respaldo se realiza primero en un entorno aislado, validando la integridad de los archivos y registros antes de sustituir la información operativa. La integridad de los datos se verifica mediante pruebas de restauración, incluyendo la integridad de los datos recuperados y el tiempo empleado.\n\nContexto utilizado: [DOC009], [DOC012], [DOC008]",
+      "modo": "rag",
+      "fuentes": [
+        {
+          "id": "DOC009",
+          "title": "Proceso de restauración de un respaldo",
+          "text": "Para restaurar datos se identifica la copia de respaldo correspondiente al punto de recuperación aprobado. La restauración se realiza primero en un entorno aislado. Se valida la integridad de archivos y registros antes de sustituir información operativa. El responsable registra el tiempo de recuperación y cualquier pérdida observada para ajustar el plan de respaldos.",
+          "score": 0.25705031060308187
+        },
+        {
+          "id": "DOC012",
+          "title": "Bitácora de pruebas de recuperación",
+          "text": "La bitácora registra las pruebas de restauración de respaldos, la fecha de cada copia y el responsable de la recuperación. Incluye la integridad de los datos recuperados y el tiempo empleado. Cuando una prueba supera el objetivo de recuperación, se revisan el tamaño del respaldo, la capacidad del repositorio y las instrucciones de restauración.",
+          "score": 0.18275492411738764
+        },
+        {
+          "id": "DOC008",
+          "title": "Ticket: respaldo nocturno fallido por falta de espacio",
+          "text": "El respaldo nocturno de la base de datos falló porque el repositorio de copias no tenía espacio disponible. Soporte revisó la retención, liberó copias vencidas autorizadas y repitió el respaldo. Después ejecutó una restauración de prueba y verificó la integridad de los datos. Se configuró una alerta de capacidad para evitar que el incidente se repita.",
+          "score": 0.17043394097808467
+        }
+      ],
+      "documento_activo": null,
+      "segundos": 15.435
+    },
+    {
+      "prueba": "P4",
+      "tipo": "Sin cobertura",
+      "pregunta": "¿Cuál es la órbita de Neptuno?",
+      "consulta_resuelta": "¿Cuál es la órbita de Neptuno?",
+      "respuesta": "Información insuficiente en la base. Reformula la pregunta o indica un documento.",
+      "modo": "sin_contexto",
+      "fuentes": [],
+      "documento_activo": null,
+      "segundos": 0.004
+    },
+    {
+      "prueba": "P5",
+      "tipo": "ID inválido",
+      "pregunta": "¿De qué trata DOC999?",
+      "consulta_resuelta": "¿De qué trata DOC999?",
+      "respuesta": "Ese identificador no existe. Usa DOC001 a DOC030.",
+      "modo": "id_invalido",
+      "fuentes": [],
+      "documento_activo": null,
+      "segundos": 0.0
+    }
+  ],
+  "verificaciones": "OK; revisión semántica manual en el reporte"
+}

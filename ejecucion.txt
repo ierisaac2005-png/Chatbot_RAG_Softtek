@@ -1,0 +1,41 @@
+
+P1 | Información general
+ENTRADA: ¿De qué trata DOC008?
+MODO: rag
+RESPUESTA: Trata de informar sobre un incidente fallido en el respaldo nocturno de la base de datos debido a la falta de espacio en el repositorio de copias. [DOC008]
+FUENTES: ['DOC008']
+TIEMPO: 9.493s
+
+P2 | Recomendación y seguimiento
+ENTRADA: ¿Qué documentos relacionados existen?
+MODO: rag
+RESPUESTA: [DOC012] Bitácora de pruebas de recuperación  
+[DOC011] Ticket: restauración incompleta por copia dañada  
+[DOC010] FAQ: diferencia entre respaldo completo e incremental
+FUENTES: ['DOC012', 'DOC011', 'DOC010']
+TIEMPO: 12.599s
+
+P3 | Consulta libre
+ENTRADA: ¿Cómo se realiza la restauración de un respaldo y cómo se verifica la integridad de los datos?
+MODO: rag
+RESPUESTA: La restauración de un respaldo se realiza primero en un entorno aislado, validando la integridad de los archivos y registros antes de sustituir la información operativa. La integridad de los datos se verifica mediante pruebas de restauración, incluyendo la integridad de los datos recuperados y el tiempo empleado.
+
+Contexto utilizado: [DOC009], [DOC012], [DOC008]
+FUENTES: ['DOC009', 'DOC012', 'DOC008']
+TIEMPO: 15.435s
+
+P4 | Sin cobertura
+ENTRADA: ¿Cuál es la órbita de Neptuno?
+MODO: sin_contexto
+RESPUESTA: Información insuficiente en la base. Reformula la pregunta o indica un documento.
+FUENTES: []
+TIEMPO: 0.004s
+
+P5 | ID inválido
+ENTRADA: ¿De qué trata DOC999?
+MODO: id_invalido
+RESPUESTA: Ese identificador no existe. Usa DOC001 a DOC030.
+FUENTES: []
+TIEMPO: 0.0s
+
+PRUEBAS COMPLETADAS. Verificaciones estructurales: OK.
